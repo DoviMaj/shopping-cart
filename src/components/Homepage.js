@@ -1,13 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const App = () => {
-  let id = useParams();
+const Homepage = () => {
   return (
     <div>
-      <h1>Hello from App {id}</h1>
+      <div
+        style={{
+          height: "550px",
+          display: "flex",
+          alignSelf: "center",
+          justifyContent: "center",
+          color: "white",
+          marginTop: "200px",
+          fontSize: "40px",
+          fontFamily: "Title-Font",
+        }}
+      >
+        A LEGEND IS REBORN
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Homepage;
