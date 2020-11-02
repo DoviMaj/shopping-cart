@@ -1,15 +1,16 @@
 import { React, useState } from "react";
 import cars from "../carsData";
 import { Card, Button, FormControl } from "react-bootstrap";
+import Checkout from "./Checkout";
 
 const Shop = () => {
   const [cart, setCart] = useState([]);
+  const [cartClicked, setCartClicked] = useState(false);
 
   function addToCart(e, car) {
     for (let i = 0; i < e.target.nextElementSibling.value; i++) {
       setCart((prevCart) => [...prevCart, car]);
     }
-    console.log(cart);
   }
 
   return (
@@ -22,9 +23,15 @@ const Shop = () => {
         gap: "30px",
       }}
     >
+      {cartClicked ? <Checkout cart={cart} /> : null}
+
       <div
+        onClick={() => {
+          setCartClicked(!cartClicked);
+        }}
         className="cart-icon"
         style={{
+          cursor: "pointer",
           position: "fixed",
           top: "100px",
           right: "-5px",
@@ -65,7 +72,7 @@ const Shop = () => {
                   className="amount-input"
                   style={{ width: "55px" }}
                   type="number"
-                  defaultValue="0"
+                  defaultValue="1"
                 ></FormControl>
               </div>
             </Card.Body>
