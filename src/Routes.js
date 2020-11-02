@@ -1,17 +1,19 @@
-import React from "react";
+import { React, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
 import Homepage from "./components/Homepage";
+import Shop from "./components/Shop";
+import About from "./components/About";
 
 const Routes = () => {
   return (
     <Router>
-      <Navbar bg="light" variant="light" style={{ color: "white" }} expand="lg">
+      <Navbar bg="light" variant="light" style={{}} expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <LinkContainer to="/Homepage">
+            <LinkContainer to="/Home">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/Shop">
@@ -23,6 +25,11 @@ const Routes = () => {
           </Nav>
         </Navbar.Collapse>
 
+        <img
+          alt="logo"
+          style={{ width: "30px", marginRight: "10px" }}
+          src="https://www.carlogos.org/car-logos/ferrari-logo-750x1100.png"
+        ></img>
         <Navbar.Brand style={{ alignSelf: "center" }}>
           <svg
             href="#home"
@@ -30,7 +37,7 @@ const Routes = () => {
             viewBox="0 0 138 25"
             role="presentation"
             aria-hidden="true"
-            tabindex="-1"
+            tabIndex="-1"
             disabled="disabled"
             clickable="false"
             style={{ width: "100px", fill: "black" }}
@@ -41,8 +48,14 @@ const Routes = () => {
         </Navbar.Brand>
       </Navbar>
       <Switch>
-        <Route exact path="/Homepage">
+        <Route exact path="/Home">
           <Homepage />
+        </Route>
+        <Route exact path="/Shop">
+          <Shop />
+        </Route>
+        <Route exact path="/About">
+          <About />
         </Route>
       </Switch>
     </Router>
@@ -52,10 +65,10 @@ const Routes = () => {
 export default Routes;
 
 /*
--homepage component
-    -some description or image/gif
--shop page component
-    -shop cart icon with item count and link to shopcart page
+-homepage component (x)
+    -some description or image/gif (x)
+-shop page component (x)
+    -shop cart icon with item count and link to shopcart page ()
 -shopcart page component
     -items added
 -navbar component 

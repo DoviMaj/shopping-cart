@@ -2,27 +2,40 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div
-      style={{
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundImage: `url("https://images.unsplash.com/photo-1527247043589-98e6ac08f56c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80") `,
-      }}
-    >
-      <div
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <video
         style={{
-          height: "670px",
+          objectFit: "cover",
+          width: "100vw",
+          height: "100vh",
+          position: "fixed",
+          top: "0",
+          left: "0",
+          zIndex: "-1",
+        }}
+        playsInline
+        autoPlay={true}
+        muted
+        loop
+        poster="polina.jpg"
+        id="bgvid"
+      >
+        <source
+          src="https://ferrari-cdn.thron.com/static/BXAHGZ_cover-gamma-desk-4500_UWNB2I.mp4?xseo="
+          type="video/mp4"
+        ></source>
+      </video>
+      <h1
+        style={{
           display: "flex",
-          alignSelf: "center",
-          alignItems: "center",
-          justifyContent: "center",
+          zIndex: "2",
           color: "white",
-          fontSize: "40px",
-          fontFamily: "Title-Font",
+          marginTop: "200px",
+          fontFamily: "TITLE",
         }}
       >
         A LEGEND IS REBORN
-      </div>
+      </h1>
     </div>
   );
 };
