@@ -23,24 +23,17 @@ const Shop = () => {
         gap: "30px",
       }}
     >
-      {cartClicked ? <Checkout cart={cart} /> : null}
+      {cartClicked ? (
+        <Checkout cart={cart} setCartClicked={setCartClicked} />
+      ) : null}
 
       <div
         onClick={() => {
           setCartClicked(!cartClicked);
         }}
         className="cart-icon"
-        style={{
-          cursor: "pointer",
-          position: "fixed",
-          top: "100px",
-          right: "-5px",
-          background: "white",
-          borderRadius: "3px",
-          padding: "10px",
-        }}
       >
-        <span style={{}}>{cart.length}</span>
+        <span>{cart.length}</span>
         <img
           alt="cart-icon"
           src="https://img.icons8.com/dotty/45/000000/shopping-cart.png"
@@ -66,7 +59,12 @@ const Shop = () => {
               <h1>{car.name}</h1>
               <Card.Text>{car.description}</Card.Text>
               <div style={{ display: "flex", gap: "10px" }}>
-                <Button onClick={(e) => addToCart(e, car)}>Add to cart</Button>
+                <Button
+                  className="add-to-cart"
+                  onClick={(e) => addToCart(e, car)}
+                >
+                  Add to cart
+                </Button>
                 <FormControl
                   min="0"
                   className="amount-input"

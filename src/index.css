@@ -1,10 +1,13 @@
-body {
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+  font-family: sans-serif;
 }
 
 code {
@@ -16,11 +19,51 @@ code {
   animation: 2s ease-in 1s forwards fadeIn;
 }
 
+.checkout-cart {
+  animation: 1s forwards slideUp;
+}
+
+.add-to-cart {
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 100px;
+  right: -100px;
+  background: white;
+  border-radius: 3px;
+  padding: 10px;
+  animation: 2s forwards slideLeft;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.1);
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 40px;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    right: -100px;
+  }
+  to {
+    right: -6px;
   }
 }
