@@ -20,6 +20,14 @@ code {
 
 .checkout-cart {
   animation: 1s forwards slideUp;
+  color: gray;
+  position: fixed;
+  top: 1000px;
+  z-index: 1;
+  width: 50%;
+  height: 600px;
+  background: white none repeat scroll 0% 0%;
+  border-radius: 10px;
 }
 
 .add-to-cart {
@@ -35,6 +43,7 @@ code {
   border-radius: 3px;
   padding: 10px;
   animation: 2s forwards slideLeft;
+  z-index: 2;
 }
 
 .add-to-cart:hover {
