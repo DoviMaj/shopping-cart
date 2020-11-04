@@ -6,11 +6,8 @@ This project was made to practice:
 - Hooks
 - React Router
 
-<<<<<<< HEAD
-=======
 Visit it live [here](https://dovimaj.github.io/shopping-cart/)
 
->>>>>>> 8d49a60dd4b0364951f392aa298c44bcd9c6b719
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
