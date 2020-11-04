@@ -18,7 +18,7 @@ const Routes = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <LinkContainer to={process.env.PUBLIC_URL + "/Home"}>
+            <LinkContainer to={process.env.PUBLIC_URL}>
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to={process.env.PUBLIC_URL + "/Shop"}>
@@ -53,20 +53,20 @@ const Routes = () => {
         </Navbar.Brand>
       </Navbar>
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/Home"}>
+        <Route exact path={process.env.PUBLIC_URL}>
           <Homepage />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL + "/Shop"}>
+        <Route path={process.env.PUBLIC_URL + "/Shop"}>
           <Shop />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL + "/About"}>
+        <Route path={process.env.PUBLIC_URL + "/About"}>
           <About />
         </Route>
-        <Route exact path="*">
-          <Redirect to={process.env.PUBLIC_URL + "/Home"} />
+        <Route exact path={"/"}>
+          <Redirect to={process.env.PUBLIC_URL} />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL + "/"}>
-          <Homepage />
+        <Route path="*">
+          <Redirect to={process.env.PUBLIC_URL} />
         </Route>
       </Switch>
     </Router>
