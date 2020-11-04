@@ -1,3 +1,11 @@
+# Shopping Cart project
+
+This project was made to practice:
+
+- React Functional Components
+- Hooks
+- React Router
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

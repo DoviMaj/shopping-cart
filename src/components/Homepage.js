@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../homepage-video.mp4";
 
 const Homepage = () => {
   return (
@@ -14,16 +15,13 @@ const Homepage = () => {
           zIndex: "-1",
         }}
         playsInline
-        autoPlay={true}
+        autoPlay
         muted
         loop
         poster="polina.jpg"
         id="bgvid"
       >
-        <source
-          src="https://ferrari-cdn.thron.com/static/BXAHGZ_cover-gamma-desk-4500_UWNB2I.mp4?xseo="
-          type="video/mp4"
-        ></source>
+        <source src={video} type="video/mp4"></source>
       </video>
       <h1
         style={{
