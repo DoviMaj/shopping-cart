@@ -31,6 +31,24 @@ code {
   margin: 5% 0 0 -25%;
 }
 
+.shop-page {
+  background: rgb(30, 27, 27) none repeat scroll 0% 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  transition: all 0.3s ease-in-out 0.3s;
+}
+
+.car-container {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+  width: 50rem;
+  color: white;
+  font-family: title;
+  border: 0px none;
+}
+
 .add-to-cart {
   transition: all 0.2s ease-in-out;
 }
@@ -45,6 +63,51 @@ code {
   padding: 10px;
   animation: 2s forwards slideLeft;
   z-index: 2;
+}
+
+.close-cart {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: x-large;
+  position: absolute;
+  right: 0px;
+  top: -9px;
+}
+
+.cart-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  flex-wrap: wrap;
+}
+
+.cart-total {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-break: break-all;
+  color: black;
+}
+
+.cart-bottom-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .add-to-cart:hover {

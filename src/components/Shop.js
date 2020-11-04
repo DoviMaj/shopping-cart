@@ -28,16 +28,10 @@ const Shop = () => {
         />
       ) : null}
       <div
-        className="shop-page"
         style={{
-          background: "rgb(30, 27, 27)",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "30px",
-          transition: "all 0.3s ease-in-out",
           WebkitFilter: cartClicked ? "blur(2px) grayscale(10%)" : null,
         }}
+        className="shop-page"
       >
         <div
           onClick={() => {
@@ -53,19 +47,7 @@ const Shop = () => {
         </div>
         {cars.map((car) => {
           return (
-            <Card
-              className="car-container"
-              key={car.id}
-              id={car.id}
-              style={{
-                opacity: "0",
-                background: "none",
-                width: "50rem",
-                color: "white",
-                fontFamily: "title",
-                border: "0px",
-              }}
-            >
+            <Card className="car-container" key={car.id} id={car.id}>
               <Card.Img variant="top" src={car.image} />
               <Card.Body style={{ position: "relative", bottom: "80px" }}>
                 <h1>{car.name}</h1>
