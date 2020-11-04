@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import cars from "../carsData";
 import { Card, Button, FormControl } from "react-bootstrap";
 import Checkout from "./Checkout";
@@ -6,12 +6,17 @@ import Checkout from "./Checkout";
 const Shop = () => {
   const [cart, setCart] = useState([]);
   const [cartClicked, setCartClicked] = useState(false);
+  const [cartLength, setCartLength] = useState(0);
 
   function addToCart(e, car) {
     for (let i = 0; i < e.target.nextElementSibling.value; i++) {
       setCart((prevCart) => [...prevCart, car]);
     }
   }
+
+  useEffect(() => {
+    setCartLength(cart.length);
+  }, [cart]);
 
   return (
     <div
@@ -24,7 +29,11 @@ const Shop = () => {
       }}
     >
       {cartClicked ? (
-        <Checkout cart={cart} setCartClicked={setCartClicked} />
+        <Checkout
+          cartLength={cartLength}
+          cart={cart}
+          setCartClicked={setCartClicked}
+        />
       ) : null}
 
       <div
