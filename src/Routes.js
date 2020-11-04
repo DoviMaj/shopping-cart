@@ -56,6 +56,9 @@ const Routes = () => {
         <Route exact path="/">
           <Redirect to="/Home" />
         </Route>
+        <Route exact path="/shopping-cart">
+          <Redirect to="/Home" />
+        </Route>
         <Route exact path="/Home">
           <Homepage />
         </Route>
