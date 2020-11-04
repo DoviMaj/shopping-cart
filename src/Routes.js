@@ -53,17 +53,20 @@ const Routes = () => {
         </Navbar.Brand>
       </Navbar>
       <Switch>
-        <Route exact path="/">
+        <Route exact path={process.env.PUBLIC_URL + "/Home"}>
           <Homepage />
         </Route>
-        <Route exact path="/Home">
-          <Homepage />
-        </Route>
-        <Route exact path="/Shop">
+        <Route exact path={process.env.PUBLIC_URL + "/Shop"}>
           <Shop />
         </Route>
-        <Route exact path="/About">
+        <Route exact path={process.env.PUBLIC_URL + "/About"}>
           <About />
+        </Route>
+        <Route exact path="*">
+          <Redirect to={process.env.PUBLIC_URL + "/Home"} />
+        </Route>
+        <Route exact path={process.env.PUBLIC_URL + "/"}>
+          <Homepage />
         </Route>
       </Switch>
     </Router>
