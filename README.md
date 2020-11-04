@@ -1,3 +1,13 @@
+# Shopping Cart project
+
+This project was made to practice:
+
+- React Functional Components
+- Hooks
+- React Router
+
+Visit it live [here](https://dovimaj.github.io/shopping-cart/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
