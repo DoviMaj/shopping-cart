@@ -1,5 +1,10 @@
 import { React } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
 import Homepage from "./components/Homepage";
@@ -13,7 +18,7 @@ const Routes = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <LinkContainer to="/">
+            <LinkContainer to="/Home">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/Shop">
@@ -49,6 +54,9 @@ const Routes = () => {
       </Navbar>
       <Switch>
         <Route exact path="/">
+          <Redirect to="/Home" />
+        </Route>
+        <Route exact path="/Home">
           <Homepage />
         </Route>
         <Route exact path="/Shop">
