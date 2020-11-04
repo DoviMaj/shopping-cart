@@ -13,7 +13,7 @@ const Routes = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <LinkContainer to="/Home">
+            <LinkContainer to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/Shop">
@@ -48,7 +48,7 @@ const Routes = () => {
         </Navbar.Brand>
       </Navbar>
       <Switch>
-        <Route exact path="/Home">
+        <Route exact path="/">
           <Homepage />
         </Route>
         <Route exact path="/Shop">
