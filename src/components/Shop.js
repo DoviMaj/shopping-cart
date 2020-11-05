@@ -6,12 +6,17 @@ import Checkout from "./Checkout";
 const Shop = () => {
   const [cart, setCart] = useState([]);
   const [cartClicked, setCartClicked] = useState(false);
-  const [cartLength, setCartLength] = useState(0);
+  const [cartLength, setCartLength] = useState(cart.length);
 
   function addToCart(e, car) {
     for (let i = 0; i < e.target.nextElementSibling.value; i++) {
       setCart((prevCart) => [...prevCart, car]);
     }
+  }
+
+  function emptyCart() {
+    setCart([]);
+    setCartClicked(0);
   }
 
   useEffect(() => {
@@ -25,6 +30,7 @@ const Shop = () => {
           cartLength={cartLength}
           cart={cart}
           setCartClicked={setCartClicked}
+          emptyCart={emptyCart}
         />
       ) : null}
       <div
