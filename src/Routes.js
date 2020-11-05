@@ -21,10 +21,10 @@ const Routes = () => {
             <LinkContainer to={process.env.PUBLIC_URL}>
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
-            <LinkContainer to={process.env.PUBLIC_URL + "/Shop"}>
+            <LinkContainer to={process.env.PUBLIC_URL + "/shop"}>
               <Nav.Link>Shop</Nav.Link>
             </LinkContainer>
-            <LinkContainer to={process.env.PUBLIC_URL + "/About"}>
+            <LinkContainer to={process.env.PUBLIC_URL + "/about"}>
               <Nav.Link>About</Nav.Link>
             </LinkContainer>
           </Nav>
@@ -56,10 +56,10 @@ const Routes = () => {
         <Route exact path={process.env.PUBLIC_URL}>
           <Homepage />
         </Route>
-        <Route path={process.env.PUBLIC_URL + "/Shop"}>
+        <Route path={process.env.PUBLIC_URL + "/shop"}>
           <Shop />
         </Route>
-        <Route path={process.env.PUBLIC_URL + "/About"}>
+        <Route path={process.env.PUBLIC_URL + "/about"}>
           <About />
         </Route>
         <Route exact path={"/"}>
