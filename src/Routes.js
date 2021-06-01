@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  HashRouter,
 } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
@@ -13,7 +14,7 @@ import About from "./components/About";
 
 const Routes = () => {
   return (
-    <Router>
+    <HashRouter>
       <Navbar bg="light" variant="light" style={{}} expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -69,7 +70,7 @@ const Routes = () => {
           <Redirect to={process.env.PUBLIC_URL} />
         </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 };
 
